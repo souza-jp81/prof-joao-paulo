@@ -50,21 +50,38 @@ function initMobileMenu() {
   const mobileToggleBtn = document.getElementById('mobileToggleBtn');
   const navLinks = document.getElementById('navLinks');
 
-  if (mobileToggleBtn && navLinks) {
-    mobileToggleBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-active');
-      const isOpen = navLinks.classList.contains('mobile-active');
-      mobileToggleBtn.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-    });
+  if (!mobileToggleBtn || !navLinks) return;
 
-    // Close mobile menu when clicking outside or link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile-active');
-        mobileToggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-      });
-    });
+  // Create ambient backdrop element dynamically if missing
+  let backdrop = document.querySelector('.nav-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
   }
+
+  function toggleMenu(open) {
+    const shouldOpen = open !== undefined ? open : !navLinks.classList.contains('mobile-active');
+    navLinks.classList.toggle('mobile-active', shouldOpen);
+    backdrop.classList.toggle('active', shouldOpen);
+    mobileToggleBtn.innerHTML = shouldOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    mobileToggleBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+  }
+
+  mobileToggleBtn.addEventListener('click', () => toggleMenu());
+  backdrop.addEventListener('click', () => toggleMenu(false));
+
+  // Close mobile menu when clicking any nav link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // Close on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('mobile-active')) {
+      toggleMenu(false);
+    }
+  });
 }
 
 /* --- 3. ANIMATED STATS COUNTER --- */
