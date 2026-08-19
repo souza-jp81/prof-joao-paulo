@@ -210,11 +210,11 @@ function initMaterialsHub() {
     }
   }
 
-  // Handle Download Click Feedback
+  // Handle Open Document Click Feedback
   document.querySelectorAll('.btn-download-action').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       const fileName = btn.getAttribute('data-filename') || 'Material de Aula';
-      showToast(`Iniciando download: ${fileName}`, 'fa-file-download');
+      showToast(`Abrindo documento: ${fileName}`, 'fa-external-link-alt');
     });
   });
 }
