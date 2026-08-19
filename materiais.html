@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materiais de Aula & Downloads | Prof. João Paulo</title>
+  <meta name="description"
+    content="Central interativa de downloads do Prof. João Paulo. Baixe PDFs, resumos e slides de Biomecânica, RTM e Citologia." />
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Dynamic Ambient Glow Background Orbs -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-badge"><i class="fas fa-graduation-cap"></i> PROF</span>
+        <span>JOÃO PAULO</span>
+      </a>
+
+      <div class="nav-right">
+        <ul id="navLinks" class="nav-links">
+          <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="materiais.html" class="active"><i class="fas fa-folder-open"></i> Materiais & Downloads</a></li>
+        </ul>
+
+        <!-- Theme Switcher Button -->
+        <button id="themeToggleBtn" class="theme-toggle" title="Alternar Modo Escuro/Claro">
+          <i id="themeIcon" class="fas fa-sun"></i>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobileToggleBtn" class="mobile-toggle" aria-label="Abrir Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="hub-header">
+      <div class="container">
+        <a href="index.html" class="btn btn-secondary btn-sm" style="margin-bottom: 20px;">
+          <i class="fas fa-arrow-left"></i> Voltar à Página Inicial
+        </a>
+        <h1 style="font-family: var(--font-display); font-size: 2.8rem; font-weight: 800;">
+          Central de <span class="gradient-text">Materiais de Aula</span>
+        </h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin-top: 8px;">
+          Explore a biblioteca digital do Professor João Paulo. Filtre por disciplina, pesquise por tópicos ou salve
+          seus materiais favoritos.
+        </p>
+
+        <!-- FILTER TOOLBAR & SEARCH -->
+        <div class="filter-toolbar">
+          <div class="search-box-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" class="search-input"
+              placeholder="Pesquisar por assunto (ex: Biomecânica, Massoterapia, Membrana, Ciclo)..." />
+            <button id="clearSearchBtn" class="clear-search" title="Limpar pesquisa">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Subject Tabs Filter -->
+          <div class="tabs-scroll-wrapper">
+            <div class="tabs-container">
+              <button class="tab-btn active" data-category="all">
+                <i class="fas fa-th-large"></i> Todos os Materiais
+              </button>
+              <button class="tab-btn" data-category="avaliacao-funcional">
+                <i class="fa-solid fa-user-doctor"></i> Avaliação Funcional
+              </button>
+              <button class="tab-btn" data-category="cinesio-to">
+                <i class="fa-solid fa-skull"></i> Cinesiologia em T.O.
+              </button>
+              <button class="tab-btn" data-category="cinesioterapia">
+                <i class="fa-solid fa-person-running"></i> Cinesioterapia
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN MATERIALS LIST SECTION -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <!-- Controls Bar (Results Count & Grid/List View Toggle) -->
+        <div class="controls-bar">
+
+
+          <div class="view-toggle-btns">
+            <button id="viewGridBtn" class="view-btn active" title="Visualização em Grade">
+              <i class="fas fa-th-large"></i>
+            </button>
+            <button id="viewListBtn" class="view-btn" title="Visualização em Lista">
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Materials Grid Container -->
+        <div id="materialsGrid" class="materials-grid">
+
+          <!-- === AVALIAÇÃO FUNCIONAL === -->
+          <div class="material-card" data-category="avaliacao-funcional">
+            <div class="material-header">
+              <div class="file-icon-badge">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div>
+                <div class="material-category"><i></i> Avaliação Funcional</div>
+                <h3 class="material-title">Propedêutica da Avaliação Fisioterapêutica</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+              Conjunto de métodos e técnicas usados para investigar, examinar e analisar o estado de saúde do paciente.
+            </p>
+            <div class="material-meta">
+              <div class="meta-item"><i class="fas fa-file-alt"></i> PDF Documento</div>
+              <div class="meta-item"><i class="fas fa-layer-group"></i> Aula 01</div>
+            </div>
+            <div class="material-actions">
+              <a href="./assets/avaliacao-funcional/01 - Propedeutica da avaliação fisioterapeutica e anamnese.pdf"
+                download class="btn btn-primary btn-sm btn-download-action"
+                data-filename="Propedêutica da Avaliação Fisioterapêutica" style="flex-grow: 1;">
+                <i class="fas fa-download"></i> Baixar PDF
+              </a>
+              <button class="btn-bookmark" data-id="bio-1" title="Salvar nos Favoritos">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="material-card" data-category="avaliacao-funcional">
+            <div class="material-header">
+              <div class="file-icon-badge">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div>
+                <div class="material-category"><i></i> Avaliação Funcional</div>
+                <h3 class="material-title">Exame Físico e Funcional do Paciente</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+              Avaliação clínica detalhada feita pelo Fisioterapeuta para checar o estado do corpo, medir a força, a
+              mobilidade e achar sinais de doenças ou limites nos movimentos
+            </p>
+            <div class="material-meta">
+              <div class="meta-item"><i class="fas fa-file-alt"></i> PDF Documento</div>
+              <div class="meta-item"><i class="fas fa-layer-group"></i> Aula 02</div>
+            </div>
+            <div class="material-actions">
+              <a href="./assets/avaliacao-funcional/02 - Exame físico e funcional do paciente.pdf" download
+                class="btn btn-primary btn-sm btn-download-action" data-filename="Exame Físico e Funcional do Paciente"
+                style="flex-grow: 1;">
+                <i class="fas fa-download"></i> Baixar PDF
+              </a>
+              <button class="btn-bookmark" data-id="bio-1" title="Salvar nos Favoritos">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ===  CINESIOLOGIA EM TO === -->
+          <div class="material-card" data-category="cinesio-to">
+            <div class="material-header">
+              <div class="file-icon-badge">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div>
+                <div class="material-category"><i></i>Cinesiologia em T.O.</div>
+                <h3 class="material-title">Cinesiologia aplicada à Terapia Ocupacional</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+              A cinesiologia aplicada à terapia ocupacional estuda o movimento humano para analisar como os músculos,
+              ossos e articulações participam das tarefas diárias.
+            </p>
+            <div class="material-meta">
+              <div class="meta-item"><i class="fas fa-file-alt"></i> PDF Documento</div>
+              <div class="meta-item"><i class="fas fa-layer-group"></i> Aula 01</div>
+            </div>
+            <div class="material-actions">
+              <a href="./assets/cinesiologia-to/01 - Cinesiologia aplicada à TO.pdf" download
+                class="btn btn-primary btn-sm btn-download-action"
+                data-filename="Cinesiologia aplicada à Terapia Ocupacional" style="flex-grow: 1;">
+                <i class="fas fa-download"></i> Baixar PDF
+              </a>
+              <button class="btn-bookmark" data-id="rtm-1" title="Salvar nos Favoritos">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="material-card" data-category="cinesio-to">
+            <div class="material-header">
+              <div class="file-icon-badge">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div>
+                <div class="material-category"><i></i>Cinesiologia em T.O.</div>
+                <h3 class="material-title">Cinesiologia dos MMSS e MMII</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+              A cinesiologia estuda o movimento humano, analisando os ossos, as articulações e os músculos. Nos membros
+              superiores (MMSS), o foco é a manipulação e o alcance; nos membros inferiores (MMII), o foco é a
+              sustentação do peso e a marcha.
+            </p>
+            <div class="material-meta">
+              <div class="meta-item"><i class="fas fa-file-alt"></i> PDF Documento</div>
+              <div class="meta-item"><i class="fas fa-layer-group"></i> Aula 02</div>
+            </div>
+            <div class="material-actions">
+              <a href="./assets/cinesiologia-to/02 - Cinesiologia MMSS-MMII.pdf" download
+                class="btn btn-primary btn-sm btn-download-action" data-filename="Cinesiologia dos MMSS e MMII"
+                style="flex-grow: 1;">
+                <i class="fas fa-download"></i> Baixar PDF
+              </a>
+              <button class="btn-bookmark" data-id="rtm-1" title="Salvar nos Favoritos">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+
+          <!-- === CINESIOTERAPIA === -->
+          <div class="material-card" data-category="cinesioterapia">
+            <div class="material-header">
+              <div class="file-icon-badge">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div>
+                <div class="material-category"><i></i> Cinesioterapia</div>
+                <h3 class="material-title">Cinesioterapia: Arquitetura Clínica do Movimento Humano</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+              Ramo da fisioterapia que utiliza o movimento corporal com objetivos terapêuticos para reabilitar,
+              manter ou melhorar a função física, a força muscular, a mobilidade e o equilíbrio de pacientes com
+              limitações ou lesões.
+            </p>
+            <div class="material-meta">
+              <div class="meta-item"><i class="fas fa-file-alt"></i> PDF Documento</div>
+              <div class="meta-item"><i class="fas fa-layer-group"></i> Aula 01</div>
+            </div>
+            <div class="material-actions">
+              <a href="./assets/cinesioterapia/01 - Cinesioterapia - arquitetura.pdf" download
+                class="btn btn-primary btn-sm btn-download-action"
+                data-filename="Cinesioterapia: Arquitetura Clínica do Movimento Humano" style="flex-grow: 1;">
+                <i class="fas fa-download"></i> Baixar PDF
+              </a>
+              <button class="btn-bookmark" data-id="cito-1" title="Salvar nos Favoritos">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="material-card" data-category="cinesioterapia">
+            <div class="material-header">
+              <div class="file-icon-badge">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div>
+                <div class="material-category"><i></i> Cinesioterapia</div>
+                <h3 class="material-title">Tipos de Exercícios Cinesioterapêuticos</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+              A cinesioterapia usa exercícios terapêuticos guiados para recuperar movimentos, aliviar dores, melhorar a
+              força e corrigir a postura. Os tipos principais dividem-se em movimentos passivos (feitos pelo terapeuta),
+              ativos-assistidos (com ajuda parcial), ativos livres (feitos pelo paciente) e resistidos (com peso ou
+              força contra).
+            </p>
+            <div class="material-meta">
+              <div class="meta-item"><i class="fas fa-file-alt"></i> PDF Documento</div>
+              <div class="meta-item"><i class="fas fa-layer-group"></i> Aula 02</div>
+            </div>
+            <div class="material-actions">
+              <a href="./assets/cinesioterapia/02 - Tipos de Exercícios Cinesioterapêuticos.pdf" download
+                class="btn btn-primary btn-sm btn-download-action"
+                data-filename="Cinesioterapia: Tipos de Exercícios Cinesioterapêuticos" style="flex-grow: 1;">
+                <i class="fas fa-download"></i> Baixar PDF
+              </a>
+              <button class="btn-bookmark" data-id="cito-1" title="Salvar nos Favoritos">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Empty State (Hidden by default) -->
+          <div id="noResults" class="no-results">
+            <i class="fas fa-search-minus"></i>
+            <h3>Nenhum material encontrado</h3>
+            <p>Tente buscar por outro termo ou selecione uma categoria diferente.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <p>© 2026 | Prof. João Paulo | Todos os direitos reservados.</p>
+      </div>
+
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:contato@profjoaopaulo.edu.br" class="social-btn" title="E-mail">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="index.html" class="social-btn" title="Início">
+          <i class="fas fa-home"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Engine -->
+  <script src="script.js"></script>
+</body>
+
+</html>
